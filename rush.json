@@ -374,8 +374,8 @@
       "projectFolder": "libraries/eslint-config"
     },
     {
-      "packageName": "homework-1",
-      "projectFolder": "apps/homework-1"
+      "packageName": "lesson-1-homework",
+      "projectFolder": "apps/lesson-1-homework"
     }
     // {
     //   /**
