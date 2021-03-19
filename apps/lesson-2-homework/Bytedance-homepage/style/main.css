@@ -1,0 +1,32 @@
+body, ul, input, div {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    display: block;
+}
+
+button, input {
+    overflow: visible;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    list-style: none;
+    display: list-item;
+}
+
+.clearfloat {
+    clear: both;
+    height: 0;
+    font-size: 1px;
+    line-height: 0px;
+  }
