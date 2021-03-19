@@ -1,137 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Column Fixed Header</title>
-    <style type="text/css">
-        body  {
-            background: #666666;
-            color: #000000;
-            font: 100%;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Column Fixed Header</title>
+        <style type="text/css">
+            body  {
+                background: #666666;
+                color: #000000;
+                font: 100%;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
 
-        .clearfloat { 
-            clear: both;
-            font-size: 1px;
-            height: 0;
-            line-height: 0px;
-        }
+            .clearfloat { 
+                clear: both;
+                font-size: 1px;
+                height: 0;
+                line-height: 0px;
+            }
 
-        #container {
-            background: #FFFFFF;
-            border: 1px solid #000000;
-            margin: 0 auto;
-            text-align: left;
-            width: 780px;
-        }
+            #container {
+                background: #FFFFFF;
+                border: 1px solid #000000;
+                margin: 0 auto;
+                text-align: left;
+                width: 780px;
+            }
 
-        #footer {
-            background-color: #DDDDDD;
-            padding: 0 10px 0 20px;
-        }
+            #footer {
+                background-color: #DDDDDD;
+                padding: 0 10px 0 20px;
+            }
 
-        #footer p {
-            margin: 0;
-            padding: 10px 0;
-        }
+            #footer p {
+                margin: 0;
+                padding: 10px 0;
+            }
 
-        #header {
-            background-color: #DDDDDD;
-            padding: 0 10px 0 20px;
-        }
+            #header {
+                background-color: #DDDDDD;
+                padding: 0 10px 0 20px;
+            }
 
-        #header h1 {
-            margin: 0;
-            padding: 10px 0;
-        } 
+            #header h1 {
+                margin: 0;
+                padding: 10px 0;
+            } 
 
-        #sidebar-left {
-	        background: #EBEBEB;
-            float: left;
-	        width: 150px; 
-	        padding: 15px 10px 15px 20px;
-        }
+            #sidebar-left {
+                background: #EBEBEB;
+                float: left;
+                width: 150px; 
+                padding: 15px 10px 15px 20px;
+            }
 
-        #sidebar-right {
-	        background: #EBEBEB;
-            float: right;
-	        width: 150px; 
-	        padding: 15px 10px 15px 20px;
-        }
+            #sidebar-right {
+                background: #EBEBEB;
+                float: right;
+                width: 150px; 
+                padding: 15px 10px 15px 20px;
+            }
 
-        #content {
-            margin: 0 200px;
-            padding: 0 10px;
-        }
-    </style>
-</head>
-<body>
-    <main>
-        <div id="container">
-            <div id="header">
-                <h1>标题</h1>
+            #content {
+                margin: 0 200px;
+                padding: 0 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div id="container">
+                <div id="header">
+                    <h1>标题</h1>
+                </div>
+                <div id="sidebar-left">
+                    <h3>Sidebar1</h3>
+                    <p>
+                        此 div 上所显示的背景色刚好与内容等宽。如果您喜欢改用分界线，而且 
+                        #mainContent div 将始终包含较多的内容，请在 #mainContent div 
+                        的左边缘放置一个边框。
+                    </p>
+                    <p>
+                        Donec eu mi sed turpis feugiat feugiat. Integer turpis arcu, 
+                        pellentesque eget, cursus et, fermentum ut, sapien.
+                    </p>
+                </div>
+                <div id="sidebar-right">
+                    <h3>Sidebar2</h3>
+                    <p>
+                        此 div 上所显示的背景色刚好与内容等宽。如果您喜欢改用分界线，而且 
+                        #mainContent div 将始终包含较多的内容，请在 #mainContent div 
+                        的右边缘放置一个边框。
+                    </p>
+                    <p>
+                        Donec eu mi sed turpis feugiat feugiat. Integer turpis arcu, 
+                        pellentesque eget, cursus et, fermentum ut, sapien.
+                    </p>
+                </div>
+                <div id="content">
+                    <h1>主要内容</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing 
+                        elit. Praesent aliquam, justo convallis luctus 
+                        rutrum, erat nulla fermentum diam, at nonummy quam 
+                        ante ac quam. Maecenas urna purus, fermentum id, 
+                        molestie in, commodo porttitor, felis. Nam blandit 
+                        quam ut lacus. Quisque ornare risus quis ligula. 
+                        Phasellus tristique purus a augue condimentum 
+                        adipiscing. Aenean sagittis. Etiam leo pede, 
+                        rhoncus venenatis, tristique in, vulputate at, odio. 
+                        Donec et ipsum et sapien vehicula nonummy. 
+                        Suspendisse potenti.
+                    </p>
+                    <h2>H2 级别的标题</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+                        Praesent aliquam, justo convallis luctus rutrum, erat 
+                        nulla fermentum diam, at nonummy quam ante ac quam. Maecenas 
+                        urna purus, fermentum id, molestie in, commodo porttitor, 
+                        felis. Nam blandit quam ut lacus. Quisque ornare risus quis 
+                        ligula. Phasellus tristique purus a augue condimentum 
+                        adipiscing. Aenean sagittis. Etiam leo pede, rhoncus venenatis, 
+                        tristique in, vulputate at, odio.
+                    </p>   
+                </div>
+                <br class="clearfloat" />
+                <div id="footer">
+                    <p>脚注</p>
+                </div>
             </div>
-            <div id="sidebar-left">
-                <h3>Sidebar1</h3>
-                <p>
-                    此 div 上所显示的背景色刚好与内容等宽。如果您喜欢改用分界线，而且 
-                    #mainContent div 将始终包含较多的内容，请在 #mainContent div 
-                    的左边缘放置一个边框。
-                </p>
-                <p>
-                    Donec eu mi sed turpis feugiat feugiat. Integer turpis arcu, 
-                    pellentesque eget, cursus et, fermentum ut, sapien.
-                </p>
-            </div>
-            <div id="sidebar-right">
-                <h3>Sidebar2</h3>
-                <p>
-                    此 div 上所显示的背景色刚好与内容等宽。如果您喜欢改用分界线，而且 
-                    #mainContent div 将始终包含较多的内容，请在 #mainContent div 
-                    的右边缘放置一个边框。
-                </p>
-                <p>
-                    Donec eu mi sed turpis feugiat feugiat. Integer turpis arcu, 
-                    pellentesque eget, cursus et, fermentum ut, sapien.
-                </p>
-            </div>
-            <div id="content">
-                <h1>主要内容</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing 
-                    elit. Praesent aliquam, justo convallis luctus 
-                    rutrum, erat nulla fermentum diam, at nonummy quam 
-                    ante ac quam. Maecenas urna purus, fermentum id, 
-                    molestie in, commodo porttitor, felis. Nam blandit 
-                    quam ut lacus. Quisque ornare risus quis ligula. 
-                    Phasellus tristique purus a augue condimentum 
-                    adipiscing. Aenean sagittis. Etiam leo pede, 
-                    rhoncus venenatis, tristique in, vulputate at, odio. 
-                    Donec et ipsum et sapien vehicula nonummy. 
-                    Suspendisse potenti.
-                </p>
-                <h2>H2 级别的标题</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-                    Praesent aliquam, justo convallis luctus rutrum, erat 
-                    nulla fermentum diam, at nonummy quam ante ac quam. Maecenas 
-                    urna purus, fermentum id, molestie in, commodo porttitor, 
-                    felis. Nam blandit quam ut lacus. Quisque ornare risus quis 
-                    ligula. Phasellus tristique purus a augue condimentum 
-                    adipiscing. Aenean sagittis. Etiam leo pede, rhoncus venenatis, 
-                    tristique in, vulputate at, odio.
-                </p>   
-            </div>
-            <br class="clearfloat" />
-            <div id="footer">
-                <p>脚注</p>
-            </div>
-        </div>
-    </main>
-</body>
+        </main>
+    </body>
 </html>
