@@ -3,9 +3,14 @@ window.onscroll = function() {
     var clientHeight = document.documentElement.clientHeight; 
     var scrollHeight = document.documentElement.scrollHeight;
     if (scrollHeight - scrollTop < clientHeight + 100) {
+        if(document.cookie.match(/scrollTop=([^;]+)(;|$)/)!=null){
+            var arr = document.cookie.match(/scrollTop=([^;]+)(;|$)/);
+            document.documentElement.scrollTop = parseInt(arr[1]);
+            document.body.scrollTop = parseInt(arr[1]);
+        }
+        document.cookie = "scrollTop="+scrollTop;
         loadMore();
     }
-    console.log("哈哈哈哈哈哈哈")
 }
 
 function loadMore() {
