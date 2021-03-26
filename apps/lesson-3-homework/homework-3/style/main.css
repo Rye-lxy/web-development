@@ -1,0 +1,46 @@
+body, ul, input, div {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 12px/1.14 PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,Helvetica Neue,Arial,sans-serif;
+}
+
+main {
+    width: 1170px;
+    margin: 16px auto 0;
+}
+
+div {
+    display: block;
+}
+
+button, input {
+    overflow: visible;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    list-style: none;
+    display: list-item;
+}
+
+.clearfloat {
+    clear: both;
+    height: 0;
+    font-size: 1px;
+    line-height: 0px;
+}
+
+img {
+    border: 0;
+}
+

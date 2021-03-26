@@ -1,0 +1,29 @@
+.no-mode {
+    padding: 10px 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.single-mode {
+    height: 102px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.single-mode .single-mode-left {
+    width: 158px;
+    height: 102px;
+    margin-right: 16px;
+    overflow: hidden;
+    float: left;
+}
+
+.single-mode .single-mode-right {
+    height: 100%;
+    overflow: hidden;
+}
+
+.single-mode .single-mode-right .single-mode-right-inner {
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+}
