@@ -82,7 +82,6 @@ function getRefreshMode() {
     var time_before = Date.now();
     if(document.cookie.match(/loadtime=([^;]+)(;|$)/) != null){
         time_before = parseInt(document.cookie.match(/loadtime=([^;]+)(;|$)/)[1]);
-        console.log(Date.now())
     }
     timestamp = Date.now() - time_before;
     var time_text = ""
