@@ -27,3 +27,46 @@
     width: 100%;
     vertical-align: middle;
 }
+
+.refresh-mode {
+    position: relative;
+    text-align: center;
+    font-size: 14px;
+    color: #2a90d7;
+    height: 32px;
+    line-height: 32px;
+    background: rgba(41,144,215,.08);
+    border: 1px solid rgba(41,144,215,.5);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.refresh-mode:before {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+}
+
+.refresh-mode .icon-refresh {
+    color: #2a90d7;
+}
+
+.bui-icon {
+    font-family: ttIcons!important;
+    font-size: 12px;
+    display: inline-block;
+    line-height: 1;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+}
+
+.bui-icon.icon-refresh:before {
+    content: "\e640";
+}

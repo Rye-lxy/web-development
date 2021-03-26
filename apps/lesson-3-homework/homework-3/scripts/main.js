@@ -11,8 +11,8 @@ fetch("http://127.0.0.1:5500/apps/lesson-3-homework/homework-3/feed.json").then(
             var elem = getSingleMode(content);
             news[0].append(elem);
         }
-        
     });
+    document.cookie = "loadtime="+Date.now();
 });
 
 function getNoMode(content) {

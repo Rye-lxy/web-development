@@ -3,10 +3,10 @@ window.onscroll = function() {
     var clientHeight = document.documentElement.clientHeight; 
     var scrollHeight = document.documentElement.scrollHeight;
     if (scrollHeight - scrollTop < clientHeight + 100) {
-        if(document.cookie.match(/scrollTop=([^;]+)(;|$)/)!=null){
-            var arr = document.cookie.match(/scrollTop=([^;]+)(;|$)/);
-            document.documentElement.scrollTop = parseInt(arr[1]);
-            document.body.scrollTop = parseInt(arr[1]);
+        if(document.cookie.match(/scrollTop=([^;]+)(;|$)/) != null){
+            var match = document.cookie.match(/scrollTop=([^;]+)(;|$)/);
+            document.documentElement.scrollTop = parseInt(match[1]);
+            document.body.scrollTop = parseInt(match[1]);
         }
         document.cookie = "scrollTop="+scrollTop;
         loadMore();
@@ -18,16 +18,17 @@ function loadMore() {
     fetch("http://127.0.0.1:5500/apps/lesson-3-homework/homework-3/feed2.json").then(function (response) {
         return response.json();
     }).then(function (container) {
+        news[0].append(getRefreshMode());
+        
         container.data.forEach(function (content) {
             if (!content.single_mode && !content.more_mode && content.middle_mode) {
-                var elem = getNoMode(content);
-                news[0].append(elem);
+                news[0].append(getNoMode(content));
             } else if (!content.more_mode && content.middle_mode) {
-                var elem = getSingleMode(content);
-                news[0].append(elem);
+                news[0].append(getSingleMode(content));
             }
-            
         });
+
+        document.cookie = "loadtime="+Date.now();
     });
 }
 
@@ -70,6 +71,38 @@ function getSingleMode(content) {
     singleMode.append(right);
 
     return singleMode;
+}
+
+function getRefreshMode() {
+    var refreshMode = document.createElement("div");
+    refreshMode.setAttribute("class", "refresh-mode");
+    refreshMode.innerHTML = "&nbsp;点击刷新&nbsp;"
+    var time_last = document.createElement("span");
+
+    var time_before = Date.now();
+    if(document.cookie.match(/loadtime=([^;]+)(;|$)/) != null){
+        time_before = parseInt(document.cookie.match(/loadtime=([^;]+)(;|$)/)[1]);
+        console.log(Date.now())
+    }
+    timestamp = Date.now() - time_before;
+    var time_text = ""
+    if (timestamp / 60000 < 1) {
+        time_text = "刚刚看到这里";
+    } else if (timestamp / 3600000 < 1) {
+        time_text = parseInt(timestamp / 60000)+"分钟前看到这里";
+    } else if (timestamp / 86400000 < 1) {
+        time_text = parseInt(timestamp / 3600000)+"小时前看到这里";
+    } else {
+        time_text = parseInt(timestamp / 86400000)+"天前看到这里";
+    }
+    time_last.innerHTML = time_text;
+    refreshMode.insertAdjacentElement("afterbegin", time_last);
+
+    var icon = document.createElement("i");
+    icon.setAttribute("class", "bui-icon icon-refresh");
+    refreshMode.insertAdjacentElement("beforeend", icon);
+
+    return refreshMode;
 }
 
 function getTitle(content) {
