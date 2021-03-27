@@ -14,8 +14,7 @@ window.onscroll = function() {
 }
 
 function loadMore() {
-    var news = document.getElementsByClassName("news-list");
-    fetch("http://127.0.0.1:5500/apps/lesson-3-homework/homework-3/feed2.json").then(function (response) {
+    fetch("http://127.0.0.1:5500/feed2.json").then(function (response) {
         return response.json();
     }).then(function (container) {
         news[0].append(getRefreshMode());
@@ -63,7 +62,7 @@ function getSingleMode(content) {
         img_link.append(time_len);
     }
     left.append(img_link);
-
+    
     right.append(getTitle(content));
     right.append(getFooterBar(content));
 
@@ -155,7 +154,22 @@ function getFooterBar(content) {
     comments.setAttribute("class", "footer-bar-action source");
     footer_bar.append(comments);
 
-    // var time = 
+    var time = Date.now() - parseInt((content.behot_time+"000"));
+    console.log(time);
+    var time_text = ""
+    if (time / 60000 < 1) {
+        time_text = "刚刚";
+    } else if (time / 3600000 < 1) {
+        time_text = parseInt(time / 60000)+"分钟前";
+    } else if (time / 86400000 < 1) {
+        time_text = parseInt(time / 3600000)+"小时前";
+    } else {
+        time_text = parseInt(time / 86400000)+"天前";
+    }
+    var time_label = document.createElement("span");
+    time_label.setAttribute("class", "footer-bar-action time");
+    time_label.innerHTML = ("&nbsp;·&nbsp;"+time_text);
+    footer_bar.append(time_label);
 
     footer_box.append(footer_bar)
     return footer_box;
