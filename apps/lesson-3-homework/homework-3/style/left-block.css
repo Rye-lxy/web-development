@@ -7,6 +7,16 @@
     vertical-align: top;
 }
 
+.left-box {
+    width: 110px;
+}
+
+.left-box.left-fixed {
+    position: fixed;
+    top: 10px;
+    z-index: 30;
+}
+
 .left .logo {
     display: block;
     width: 110px;

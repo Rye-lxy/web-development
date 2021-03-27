@@ -26,7 +26,7 @@ function loadMore() {
                 news[0].append(getSingleMode(content));
             }
         });
-
+        
         document.cookie = "loadtime="+Date.now();
     });
 }
@@ -155,7 +155,6 @@ function getFooterBar(content) {
     footer_bar.append(comments);
 
     var time = Date.now() - parseInt((content.behot_time+"000"));
-    console.log(time);
     var time_text = ""
     if (time / 60000 < 1) {
         time_text = "刚刚";

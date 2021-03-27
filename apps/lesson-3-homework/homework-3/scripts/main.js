@@ -12,6 +12,9 @@ fetch("http://127.0.0.1:5500/feed.json").then(function (response) {
             news[0].append(elem);
         }
     });
+    var clearfloat = document.createElement("br");
+    clearfloat.setAttribute("class", "clearfloat");
+    news[0].append(clearfloat);
     document.cookie = "loadtime="+Date.now();
 });
 
