@@ -8,12 +8,30 @@
 
 .container .inner {
     overflow: scroll;
-    transition: transform 1.5s ease;
-    transform: translateX(-10%);
 }
 
 .container .inner img {
     display: block;
     height: 240px;
     float: left;
+}
+
+.container .button {
+    position: relative;
+}
+
+.container .button button {
+    top: 105px;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    color: blanchedalmond;
+    opacity: 60%;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    border-radius: 50%;
+    z-index: 100;
+    font-size: 20px;
 }
