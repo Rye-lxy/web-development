@@ -1,0 +1,72 @@
+.header {
+    background: #222;
+    font-size: 14px;
+    height: 34px;
+    line-height: 34px;
+}
+
+.header a {
+    color: white;
+}
+
+.nav {
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.nav > li {
+    display: inline-block;
+}
+
+.left-nav {
+    float: left;
+    padding: 0 10px;
+    position: relative;
+}
+
+.download-app {
+    border-right: 1px solid #3a3a3a;
+}
+
+.right-nav {
+    float: right;
+    padding: 0 10px;
+    position: relative;
+}
+
+.item-more {
+    border-left: 1px solid #3a3a3a;
+}
+
+.item-more:hover .layer {
+    visibility: visible;
+}
+
+.layer {
+    visibility: hidden;
+    position: absolute;
+    border: 1px solid #d9d9d9;
+    background: #fff;
+    z-index: 20;
+    font-size: 14px;
+    right: 0;
+    width: 116px;
+}
+
+.layer > ul {
+    list-style-type: none;
+}
+
+.layer .layer-item {
+    cursor: pointer;
+    display: block;
+    width: auto;
+    height: 42px;
+    line-height: 42px;
+    color: #999;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center;
+}
