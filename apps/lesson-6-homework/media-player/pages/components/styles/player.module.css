@@ -1,0 +1,57 @@
+.container {
+    width: 1200px;
+    height: 680px;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 5fr 1fr;
+    grid-template-areas: 
+        "sidebar main"
+        "music music";
+    gap: 0;
+}
+
+.side-bar-wrapper {
+    grid-area: sidebar;    
+}
+
+.music-container {
+    grid-area: main;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+}
+
+.music-wrapper {
+    grid-area: music;
+}
+
+@media (max-width: 991px) {
+    .side-bar-wrapper {
+        display: none;
+    }
+
+    .container {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 5fr 1fr;
+        grid-template-columns: auto;
+        grid-template-areas: 
+        "main"
+        "music";
+    }
+}
+
+
+@media (min-width: 1200px){
+    .container {
+        width: 100vw;
+    }
+
+}
+
+@media (min-height: 680px) {
+    .container {
+        height: 100vh;
+    }
+}

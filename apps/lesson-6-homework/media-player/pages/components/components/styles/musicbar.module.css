@@ -1,0 +1,33 @@
+.musicbar {
+    display: flex;
+    flex: 0 0 90px;
+    padding: 10px;
+    color: #fff;
+    background-color: rgba(61, 100, 158, .9);
+}
+
+.track {
+    display: flex;
+    margin-right: auto;
+}
+
+.text {
+    padding-left: 10px;
+}
+
+.control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+}
+
+@media (max-width: 991px) {
+    .control {
+        justify-content: space-around;
+    }
+
+    .control button:nth-child(n+4) {
+        display: none;
+    }
+}

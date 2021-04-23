@@ -1,0 +1,40 @@
+.list {
+    height: 100%;
+    flex: 1 0 auto;
+    list-style-type: none;
+    padding: 5px 10px 0px;
+}
+
+.music-list:nth-child(2n) {
+    background-color: #f2f2f2;
+}
+
+.music-list {
+    display: flex;
+    padding: 0 20px;
+    min-height: 50px;
+}
+
+.music {
+    flex: 0 0 25%;
+}
+
+.cloud {
+    border: 1px solid black;
+    font-size: 0.6em;
+    padding: 3px;
+}
+
+@media (max-width: 991px) {
+    .music {
+        flex: 0 0 50%;
+    }
+    
+    .music:nth-child(2n) {
+        display: none;
+    }
+
+    .music:nth-child(3) {
+        text-align: right;
+    }
+}
