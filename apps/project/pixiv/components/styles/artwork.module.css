@@ -1,0 +1,23 @@
+.artwork-wrapper {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+}
+
+.artwork-container {
+    padding: 0px 72px;
+    margin: 0px auto;
+    max-width: 1224px;
+}
+
+@media (max-width: 1368px) {
+    .artwork-container {
+        max-width: 1016px;
+    }
+}
+
+.artwork {
+    margin-top: 24px;
+    display: flex;
+    padding-bottom: 56px;
+}

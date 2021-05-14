@@ -1,0 +1,129 @@
+.tag-wrapper {
+    padding-top: 8px;
+    padding-bottom: 24px;
+}
+
+.tag-container {
+    position: relative;
+    z-index: 0;
+}
+
+.tag-bar {
+    overflow-x: scroll;
+    padding: 0;
+    margin: 0px;
+}
+
+.tag-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.tag-ul {
+    vertical-align: top;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    min-width: 100%;
+    box-sizing: border-box;
+    display: inline-flex;
+    margin: 0px;
+}
+
+@media (max-width: 1368px) {
+    .tag-inner {
+        padding: 0px calc((max(100vw - 0px, 1160px) - 1016px) / 2);
+    }
+}
+
+.tag-inner {
+    display: inline-block;
+    padding: 0px calc(((100vw - 0px) - 1224px) / 2);
+}
+
+.tag-inner::-webkit-scrollbar {
+    display: none;
+}
+
+.tag-main {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.tag-main-inner {
+    display: inline-flex;
+    vertical-align: top;
+}
+
+.tags {
+    display: flex;
+}
+
+.tags :not(:first-child) {
+    margin-left: 8px;
+}
+
+.tag-button-wrapper {
+    opacity: 0;
+    transition: opacity 0.4s ease 0s;
+}
+
+.tag-button-hidden {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px;
+    min-width: 40px;
+    border: none;
+    outline: 0px;
+    background: transparent;
+    cursor: pointer;
+    transition: visibility 0.4s ease 0s, opacity 0.4s ease 0s;
+    z-index: 1;
+    /* visibility: hidden;
+    opacity: 0;
+    pointer-events: none; */
+}
+
+.tag-button {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px;
+    min-width: 40px;
+    border: none;
+    outline: 0px;
+    background: transparent;
+    cursor: pointer;
+    transition: visibility 0.4s ease 0s, opacity 0.4s ease 0s;
+    z-index: 1;
+}
+
+.tag-button-icon {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.32);
+    transition: visibility 0.4s ease 0s, opacity 0.4s ease 0s, background-color 0.2s ease 0s, color 0.2s ease 0s;
+    color: rgb(255, 255, 255);
+}
+
+.tag-button-svg {
+    stroke: none;
+    fill: currentcolor;
+    width: 24px;
+    height: 24px;
+    line-height: 0;
+    font-size: 0px;
+    vertical-align: middle;
+}

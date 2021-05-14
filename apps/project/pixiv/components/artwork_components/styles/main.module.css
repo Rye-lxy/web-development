@@ -1,0 +1,38 @@
+.artwork-main {
+    flex: 0 0 auto;
+    width: 912px;
+}
+
+@media (max-width: 1368px) {
+    .artwork-main {
+        width: 704px;
+    }
+}
+
+.main-sec {
+    margin: 0px;
+    padding: 16px;
+    border-radius: 8px;
+    background: rgb(255, 255, 255);
+    font-size: 14px;
+    line-height: calc(1em + 8px);
+}
+
+.main-sec > .artwork-img:first-child {
+    margin-top: -16px;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.main-sec > .artwork-img {
+    margin-left: -16px;
+    margin-right: -16px;
+}
+
+.main-sec > :last-child {
+    margin-bottom: 0px;
+}
+
+.artwork-other {
+    position: relative;
+    margin: 0px -16px;
+}

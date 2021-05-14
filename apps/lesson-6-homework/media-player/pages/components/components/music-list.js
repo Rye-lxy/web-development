@@ -7,7 +7,7 @@ function List() {
     });
     
     useEffect(() => {
-    fetch("../../api/music").then(async (res) => {
+    fetch("../../api/music.js").then(async (res) => {
         const resp = await res.json();
         setState({
             list: resp.data,

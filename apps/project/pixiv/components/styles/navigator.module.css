@@ -1,0 +1,319 @@
+.navigator-wrapper {
+    width: 100%;
+    min-width: 1160px;
+    background-color: rgb(255, 255, 255);
+}
+
+.matte {
+    position: fixed;
+    z-index: 0;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.navigator {
+    display: grid;
+    -webkit-box-align: center;
+    align-items: center;
+    grid-template-columns: 1fr minmax(0px, 528px) 1fr;
+    gap: 24px;
+    height: 64px;
+    padding: 0px 24px;
+    background-color: rgb(255, 255, 255);
+}
+
+.nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.10);
+}
+
+.nav-left {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.sidebar-button-wrapper {
+    flex: 0 0 auto;
+}
+
+.sidebar-button {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border: none;
+    padding: 0px;
+    color: rgba(0, 0, 0, 0.32);
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+    transition: background-color 0.2s ease 0s, color 0.2s ease 0s;
+    width: 40px;
+    height: 40px;
+    margin: 0px -8px;
+}
+
+.sidebar-button-icon {
+    stroke: none;
+    fill: currentcolor;
+    width: 24px;
+    height: 24px;
+    line-height: 0;
+    font-size: 0px;
+    vertical-align: middle;
+}
+
+.left-space {
+    margin-left: 24px;
+    align-self: stretch;
+}
+
+.nav-logo {
+    margin-left: -4px;
+    height: 32px;
+}
+
+.logo {
+    display: block;
+    width: 82px;
+    height: 32px;
+}
+
+.nav-right {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: auto auto;
+    justify-self: end;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.user-info {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(5, auto);
+    -webkit-box-align: stretch;
+    align-items: stretch;
+}
+
+.language {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 0px -8px;
+}
+
+.lang-button {
+    appearance: none;
+    display: block;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.64);
+    background: transparent;
+    border: none;
+    border-radius: 100vw;
+    outline: none;
+    touch-action: manipulation;
+    user-select: none;
+    width: 100%;
+    transition: color 0.2s ease 0s;
+    text-align: left;
+    padding: 9px 16px;
+    font-size: 14px;
+    line-height: 22px;
+    cursor: pointer;
+}
+
+.lang-chooser {
+    line-height: 22px;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(59, 59, 59);
+    white-space: nowrap;
+}
+
+.user-wrapper {
+    position: relative;
+}
+
+.upload-container {
+    white-space: nowrap;
+}
+
+.upload-button {
+    display: inline-block;
+    min-width: 64px;
+    line-height: 22px;
+    margin: 0px;
+    padding: 9px 24px;
+    border: none;
+    border-radius: 100vw;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease 0s, color 0.2s ease 0s;
+    color: rgba(0, 0, 0, 0.64);
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.upload-button:hover {
+    background-color: rgba(0, 0, 0, 0.10);
+}
+
+.upload-inner {
+    display: grid;
+    grid-template-columns: repeat(2, min-content);
+    gap: 4px;
+}
+
+.upload-chooser {
+    display: inline-flex;
+    vertical-align: top;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 22px;
+}
+
+.upload-svg {
+    stroke: none;
+    fill: currentcolor;
+    width: 10px;
+    line-height: 0;
+    font-size: 0px;
+    vertical-align: middle;
+}
+
+.user-button {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border: none;
+    padding: 0px;
+    color: rgba(0, 0, 0, 0.32);
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+    transition: background-color 0.2s ease 0s, color 0.2s ease 0s;
+    width: 40px;
+    height: 40px;
+    margin: 0px -8px;
+}
+
+.user-icon {
+    stroke: none;
+    fill: currentcolor;
+    width: 24px;
+    height: 24px;
+    line-height: 0;
+    font-size: 0px;
+    vertical-align: middle;
+}
+
+.user-account-wrapper {
+    display: flex;
+}
+
+.account-button {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border: none;
+    padding: 0px;
+    color: rgba(0, 0, 0, 0.32);
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+    transition: background-color 0.2s ease 0s, color 0.2s ease 0s;
+}
+
+.account {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4px;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.avatar-wrapper {
+    display: block;
+    border-radius: 50%;
+    flex: 0 0 auto;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.avatar-wrapper::before {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.avatar {
+    object-fit: cover;
+    object-position: center top;
+}
+
+.account-more {
+    stroke: none;
+    fill: currentcolor;
+    width: 16px;
+    height: 16px;
+    line-height: 0;
+    font-size: 0px;
+    vertical-align: middle;
+}
+
+.related-wrapper {
+    position: relative;
+}
+
+.related-button {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border: none;
+    padding: 0px;
+    color: rgba(0, 0, 0, 0.32);
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+    transition: background-color 0.2s ease 0s, color 0.2s ease 0s;
+    width: 40px;
+    height: 40px;
+    margin: 0px -8px;
+}
+
+.related-icon {
+    stroke: none;
+    fill: currentcolor;
+    width: 24px;
+    height: 24px;
+    line-height: 0;
+    font-size: 0px;
+    vertical-align: middle;
+}

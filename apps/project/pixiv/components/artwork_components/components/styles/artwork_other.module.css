@@ -1,0 +1,24 @@
+.author-wrapper {
+    padding-top: 16px;
+}
+
+.author-info {
+    margin: 0px auto;
+    padding: 0px 16px;
+    max-width: 700px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.author-artworks {
+    margin-left: auto;
+    color: rgb(173, 173, 173);
+    font-size: 12px;
+    line-height: calc(1em + 4px);
+    font-weight: normal;
+}
+
+.author-artworks:hover {
+    color: rgb(128, 127, 127);
+}

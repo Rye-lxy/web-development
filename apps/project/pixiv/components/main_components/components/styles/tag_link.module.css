@@ -1,0 +1,50 @@
+.tag-wrapper {
+    display: flex;
+    min-height: 40px;
+    -webkit-box-align: center;
+    align-items: center;
+    max-width: 200px;
+    padding: 0px 24px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: center;
+}
+
+.tag-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    min-width: 0px;
+}
+
+.tag-text {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: bold;
+    display: flow-root;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+}
+
+.tag-text::before {
+    display: block;
+    width: 0px;
+    height: 0px;
+    content: "";
+    margin-top: -4px;
+}
+
+.tag-text::after {
+    display: block;
+    width: 0px;
+    height: 0px;
+    content: "";
+    margin-bottom: -4px;
+}

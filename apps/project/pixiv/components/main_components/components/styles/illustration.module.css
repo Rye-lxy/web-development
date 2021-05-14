@@ -1,0 +1,133 @@
+.illus-li {
+    margin: 12px;
+    width: 184px;
+    order: 1;
+}
+
+
+.illus-wrapper {
+    width: 184px;
+}
+
+.illustration {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.illustration-container {
+    position: relative;
+    z-index: 0;
+    width: 184px;
+    height: 184px;
+}
+
+.illustration-link {
+    text-decoration: none;
+}
+
+.illustration-img-wrapper {
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.illustration-img-wrapper::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.02);
+    border-radius: 4px;
+}
+
+.illustration-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    transition: opacity 0.2s ease 0s;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.illus-name-wrapper {
+    display: flex;
+    margin-top: 4px;
+}
+
+.illus-name {
+    display: inline;
+    max-width: 100%;
+    overflow: hidden;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 22px;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.88);
+    transition: color 0.2s ease 0s;
+}
+
+.illus-author-wrapper {
+    display: flex;
+    margin-top: 4px;
+}
+
+.illus-author {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    min-width: 0px;
+}
+
+.author-avatar-wrapper {
+    margin-right: 4px;
+}
+
+.author-avatar {
+    display: block;
+    border-radius: 50%;
+    flex: 0 0 auto;
+    overflow: hidden;
+    width: 24px;
+    height: 24px;
+    position: relative;
+}
+
+.author-avatar::before {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.avatar-img {
+    object-fit: cover;
+    object-position: center top;
+}
+
+.author-name {
+    display: block;
+    min-width: 0px;
+    line-height: 22px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.64);
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
