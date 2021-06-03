@@ -7,15 +7,43 @@ function MainRecommend() {
         list: [],
     });
 
+    // const useBottom = (action) => {
+    //     useEffect(() => {
+    //         function doInBottom() {
+    //             let scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+    //             let scrollHeight = (document.documentElement && document.documentElement.scrollHeight) || document.body.scrollHeight;
+    //             let clientHeight = document.documentElement.clientHeight || window.innerHeight;
+    //             let scrolledToBottom = Math.ceil(scrollTop + clientHeight) >= scrollHeight;
+    //             return scrolledToBottom && action;
+    //         }
+    //         window.addEventListener('scroll', doInBottom());
+    //         return () => {
+    //             window.removeEventListener('scroll', doInBottom);
+    //         };
+    //     }, [action]);
+    // };
+
+    // const fetchQuery = () => {
+    //     fetch("/api/artwork_recommend").then(async (res) => {
+    //         const resp = await res.json();
+    //         setState({
+    //             list: state.list.concat(resp),
+    //         });
+    //     });
+    // }
+
+    // useBottom(fetchQuery());
+    
+
     useEffect(() => {
         fetch("/api/artwork_recommend").then(async (res) => {
             const resp = await res.json();
             setState({
-                list: resp,
+                list: state.list.concat(resp),
             });
         });
     }, []);
-        
+
     return (
         <div className={styles["main-recommend-wrapper"]}>
             <div className={styles["main-recommend-container"]}>
